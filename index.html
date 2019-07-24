@@ -14,23 +14,45 @@
                 Let us know how to improve our website
             </p>
             <form id="form-survey" action="">
-                <div class="question">
-                    <h4>1.Please fil up your infomration below ?</h4>
-                    <div class="input">
-                        <label for="name">Name</label>
+                <div class="question-container active">
+                    <h5 class="question-title">1.Please fil up your infomration
+                        below ?</h5>
+                    <div class="input-container">
+                        <label for="name">Your name</label>
                         <input id="name" type="text" required>
                     </div>
-                    <div class="input">
-                        <label for="name">Email</label>
+                    <div class="input-container">
+                        <label for="name">Your email</label>
                         <input id="name" type="email" required>
                     </div>
-                    <div class="input">
-                        <label for="name">Age</label>
+                    <div class="input-container">
+                        <label for="name">Your age</label>
                         <input id="name" type="number" min="1" required>
                     </div>
+                </div>
+                <div class="question-container">
+                    <h5 class="question-title">1.Please fil up your infomration
+                        below ?</h5>
+                    <div class="input-container">
+                        <label for="name">Your name :</label>
+                        <input id="name" type="text" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="name">Your email :</label>
+                        <input id="name" type="email" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="name">Your age :</label>
+                        <input id="name" type="number" min="1" required>
+                    </div>
+                </div>
+                <div class="btns-container">
+                    <button id="next" class="btn btn-styled" type="button">Next</button>
+                    <button id="previous" class="btn" type="button">previous</button>
                 </div>
             </form>
         </div>
         <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>  -->
+        <script src="./script.js"></script>
     </body>
 </html>
