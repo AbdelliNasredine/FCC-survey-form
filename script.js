@@ -1,20 +1,28 @@
 const questions = document.querySelectorAll('.question-container');
 const nextBtn = document.getElementById('next')
 const prevBtn = document.getElementById('previous');
-const questionsCount = questions.length;
-let curentIndex = 0;
-
-function next(event) {
-    console.log('next')
+const lastIndex = questions.length - 1;
+let currentIndex = 0;
+const isNext = () => questions[currentIndex + 1] != undefined;
+const isPrev = () => questions[currentIndex - 1] != undefined;
+const _switch = (current, next) => {
+    current.classList.remove("active");
+    next.classList.add("active");
 }
 
-function prev(event) {
-    console.log('prev')
-}
+nextBtn.addEventListener("click", () => {
+    if(isNext()){
+        _switch(questions[currentIndex] , questions[currentIndex + 1]);
+        currentIndex++;
+    }
+    console.log(currentIndex);
+});
 
-if (curentIndex === 0) {
-
-}
-nextBtn.addEventListener("click", next(event));
-prevBtn.addEventListener("click", prev(event));
-console.log(questions[4], nextBtn, prevBtn);
+prevBtn.addEventListener("click", () => {
+    if(isPrev()){
+        _switch(questions[currentIndex] , questions[currentIndex - 1]);
+        currentIndex--;
+    }
+    console.log(currentIndex);
+});
+// console.log(questions, nextBtn, prevBtn);

@@ -1,11 +1,11 @@
 * {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 body {
-    background-color: rgb(71, 255, 132);   
-    font-family: arial;
+    background-color: rgb(71, 255, 132);
+    font-family: 'Nunito', arial;
     color: rgba(0, 0, 0, .8);
 }
 
@@ -13,7 +13,7 @@ body {
     background-color: #ffffff;
     max-width: 700px;
     margin: 0 auto;
-    padding: 1.8em; 
+    padding: 1.8em;
 }
 
 #title {
@@ -22,17 +22,31 @@ body {
 
 #description {
     font-size: 1.4em;
-    margin: 12px 0 ;
+    margin: 12px 0;
     color: rgb(85, 85, 85);
 }
 
 .question-container {
     padding: 10px 0;
-    display: none; 
+    display: none;
+    position: relative;
 }
 
 .question-container.active {
     display: block;
+    animation: reveal 1s ease-in-out ;
+}
+
+/* animation reaveal */
+@keyframes reveal {
+    0% {
+        top: 12px;
+        opacity: 0;
+    }
+    50% {
+        top: 0px;
+        opacity: 1;
+    }
 }
 
 .question-title {
@@ -42,18 +56,30 @@ body {
 
 .input-container {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: space-around;
     width: 100%;
-    padding: 10px 0; 
+    padding: 10px 0;
 }
 
-.input-container input {
-    flex: 1 auto;
+.input-container input , .input-container select {
+    border: none;
+    flex: 3;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: rgb(236, 236, 236);
+    color: #3a3a3a;
+}
+
+.input-container input:hover , .input-container input:focus {
+    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, .2);
+    background-color: white;
 }
 
 .input-container label {
-    text-align: left;
-    width: 33.33% ;
+    align-self: center;
+    text-align: right;
+    margin-right: 15px;
+    flex:1;
 }
 
 .btns-container {
@@ -62,16 +88,25 @@ body {
     margin-top: 24px;
 }
 
-.btn , .disable {
+.btn {
     color: rgba(0, 0, 0, .5);
     margin-left: 12px;
     border: none;
     font-size: 1.2em;
-    padding: 8px 12px;  
+    padding: 8px 12px;
+    border-radius: 3px;
     cursor: pointer;
+    text-transform: capitalize;
+    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, .2);
+    font-family: inherit;
+    font-weight: bold;
 }
 
 .btn-styled {
     background-color: rgb(71, 255, 132);
-    color: rgb(255, 255, 255); 
+    color: rgb(255, 255, 255);
+}
+
+.btn-styled:hover {
+    background-color: rgb(51, 182, 95);
 }
