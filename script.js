@@ -1,3 +1,7 @@
+/**
+ *  author: Abdelli Nasredine
+ *  description: 
+ */
 const questions = document.querySelectorAll('.question-container');
 const nextBtn = document.getElementById('next')
 const prevBtn = document.getElementById('previous');
@@ -11,23 +15,23 @@ const _switch = (current, next) => {
     current.classList.remove("active");
     next.classList.add("active");
 }
+const hideBtns = () => {
+    nextBtn.classList.add("not-visible");
+    prevBtn.classList.add("not-visible");
+}
 
 window.addEventListener('load', () => {
-    console.log("loaded");
     nextBtn.addEventListener("click", (event) => {
         if (isNext()) {
             _switch(questions[currentIndex], questions[currentIndex + 1]);
             currentIndex++;
         }
-        console.log(currentIndex);
+        if(isLast()) hideBtns();
     });
-
     prevBtn.addEventListener("click", () => {
         if (isPrev()) {
             _switch(questions[currentIndex], questions[currentIndex - 1]);
             currentIndex--;
         }
-        console.log(currentIndex);
     });
 })
-// console.log(questions, nextBtn, prevBtn);
