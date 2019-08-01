@@ -87,18 +87,22 @@ header {
     padding: 10px 0;
 }
 
-.input-container input , .input-container select {
+.input-container input , .input-container select , .input-container textarea {
     border: none;
     flex: 3;
     border-radius: 3px;
     padding: 15px;
-    background-color: rgb(236, 236, 236);
+    background-color: var(--color-body);
     color: #3a3a3a;
+    outline: none;
+    font-family: var(--font);
+    transition: all .2s ease-in-out;
 }
 
-.input-container input:hover , .input-container input:focus {
-    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, .2);
+.input-container input:hover , .input-container input:focus , .input-container textarea:hover , .input-container textarea:focus {
+    box-shadow: inset 0px 0px 0px 3px var(--color-header);
     background-color: white;
+    transition: all .2s ease-in-out;
 }
 
 .input-container label {
@@ -107,7 +111,6 @@ header {
     margin-right: 15px;
     flex:1;
 }
-
 .btns-container {
     display: flex;
     justify-content: flex-end;
@@ -123,9 +126,9 @@ header {
     border-radius: 3px;
     cursor: pointer;
     text-transform: capitalize;
-    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, .1);
     font-family: inherit;
     font-weight: bold;
+    outline: none;
 }
 
 .btn-styled {
@@ -134,7 +137,7 @@ header {
     transition: all .2s ease-in-out;
 }
 
-.btn-styled:hover {
+.btn-styled:hover , .btn-styled:focus {
     background-color: var(--color-btn-styled-onHover);
     transition: all .2s ease-in-out;
 }
