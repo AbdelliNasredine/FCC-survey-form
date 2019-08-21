@@ -156,3 +156,9 @@ header {
     display: none;
     visibility: hidden;
 }
+
+.img-responsive {
+    height: auto;
+    max-width: 150px;
+    width: 100%;
+}
