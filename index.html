@@ -16,29 +16,42 @@
                 </p>
             </div>
         </header>
-        <form id="survey-form" action="" autocomplete="off">
+        <form id="survey-form" action="">
             <div class="container">
                 <div class="question-container active">
                     <h5 class="question-title">Please fil up your infomration
                         below</h5>
                     <div class="input-container">
-                        <label id="name-label for="name">Your name</label>
-                        <input id="name" type="text" placeholder="Your name" required>
+                        <label id="name-label" for="name">Your name</label>
+                        <input id="name" type="text" placeholder="Your name"
+                            required>
                     </div>
                     <div class="input-container">
-                        <label id="email-label for="name">Your email</label>
-                        <input id="email" type="email" placeholder="Your email" required>
+                        <label id="email-label" for="email">Your email</label>
+                        <input id="email" type="email" placeholder="Your email"
+                            required>
                     </div>
                     <div class="input-container">
-                        <label id="number-label for="name">Your age</label>
-                        <input id="number" type="number" min="15" max="45" placeholder="Your Age" required>
+                        <label id="number-label" for="number">Your age</label>
+                        <input id="number" type="number" min="15" max="45"
+                            placeholder="Your Age" required>
+                    </div>
+                </div>
+                <div class="question-container">
+                    <div class="input-container">
+                        <label class="question-title">What is your gender ?</label>
+                        <div class="input-stack">
+                            <label><input type="radio" value="M" name="radio_btns"> Male</label>
+                            <br>
+                            <label><input type="radio" value="F" name="radio_btns"> Female</label>
+                        </div>
                     </div>
                 </div>
                 <div class="question-container">
                     <h5 class="question-title">What is your current status?</h5>
                     <div class="input-container">
-                        <label for="status">Your status</label>
-                        <select id="status" id="dropdown">
+                        <label for="dropdown">Your status</label>
+                        <select id="dropdown">
                             <optgroup label="Status">
                                 <option value="student">Student</option>
                                 <option value="employee">Employee</option>
@@ -48,16 +61,33 @@
                     </div>
                 </div>
                 <div class="question-container">
-                    <h5 class="question-title">Any Comments or Suggestions?</h5>
+                        <div class="input-container">
+                            <label class="question-title">What are the things that you want to be enhanced in our website?</label>
+                            <div class="input-stack">
+                                <label><input type="checkbox" value="1" name="like"> UI</label>
+                                <br>
+                                <label><input type="checkbox" value="2" name="like"> Proformance</label>
+                                <br>
+                                <label><input type="checkbox" value="2" name="like"> Content</label>
+                            </div>
+                        </div>
+                    </div>
+                <div class="question-container">
+                    <label class="question-title" for="coments">Any Comments or
+                        Suggestions?</label>
                     <div class="input-container">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="comments" id="comments" cols="30"
+                            rows="10"></textarea>
                     </div>
                 </div>
                 <div class="question-container center">
-                    <img class="img-responsive" src="./static/completed.svg" alt="finshed
+                    <img class="img-responsive" src="./static/completed.svg"
+                        alt="finshed
                         image">
                     <h2>Congratulations ! You have finished the survey</h2>
                     <p>Thank you for answering the questions</p>
+                    <br>
+                    <button id="submit" class="btn btn-styled" type="submit">Sumbit</button>
                 </div>
                 <div class="btns-container">
                     <button id="previous" class="btn btn-styled" type="button">previous</button>
@@ -65,7 +95,8 @@
                 </div>
             </div>
         </form>
-        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> 
+        <script
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <script src="./static/script.js"></script>
     </body>
 </html>

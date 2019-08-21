@@ -91,7 +91,7 @@ header {
     padding: 10px 0;
 }
 
-.input-container input , .input-container select , .input-container textarea {
+.input-container input , .input-container select , .input-container textarea , .input-container .input-stack{
     border: none;
     flex: 3;
     border-radius: 3px;
@@ -101,6 +101,10 @@ header {
     outline: none;
     font-family: var(--font);
     transition: all .2s ease-in-out;
+}
+
+.input-container input {
+    margin-bottom: 15px;
 }
 
 .input-container input:focus , .input-container textarea:focus {
@@ -117,6 +121,11 @@ header {
     font-weight: bold;
     color: var(--color-typo-dark);
 }
+
+.input-container .radio-group  li {
+    list-style: none;
+}   
+
 .btns-container {
     display: flex;
     justify-content: flex-end;
