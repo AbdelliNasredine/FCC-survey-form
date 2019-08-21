@@ -22,23 +22,23 @@
                     <h5 class="question-title">Please fil up your infomration
                         below</h5>
                     <div class="input-container">
-                        <label for="name">Your name</label>
+                        <label id="name-label for="name">Your name</label>
                         <input id="name" type="text" placeholder="Your name" required>
                     </div>
                     <div class="input-container">
-                        <label for="name">Your email</label>
+                        <label id="email-label for="name">Your email</label>
                         <input id="email" type="email" placeholder="Your email" required>
                     </div>
                     <div class="input-container">
-                        <label for="name">Your age</label>
-                        <input id="name" type="number" min="12" required>
+                        <label id="number-label for="name">Your age</label>
+                        <input id="number" type="number" min="15" max="45" placeholder="Your Age" required>
                     </div>
                 </div>
                 <div class="question-container">
                     <h5 class="question-title">What is your current status?</h5>
                     <div class="input-container">
                         <label for="status">Your status</label>
-                        <select id="status">
+                        <select id="status" id="dropdown">
                             <optgroup label="Status">
                                 <option value="student">Student</option>
                                 <option value="employee">Employee</option>
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </form>
-        <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>  -->
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> 
         <script src="./static/script.js"></script>
     </body>
 </html>
